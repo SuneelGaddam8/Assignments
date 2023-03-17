@@ -32,7 +32,7 @@ let result;
                                         oper=null;
                                         break;
                             }
-                            case '*':{
+                            case '×':{
                                        let v1=parseInt(first);
                                        let v2=parseInt(second);
                                        display.value=(v1*v2);
@@ -41,7 +41,7 @@ let result;
                                         oper=null;
                                         break;
                             }
-                            case '/':{
+                            case '÷':{
                                        let v1=parseInt(first);
                                        let v2=parseInt(second);
                                        display.value=v1/v2;
@@ -50,7 +50,7 @@ let result;
                                        oper=null;
                                        break;
                             }
-                            display.value=eval(display.value);
+                            // display.value=eval(display.value);
 
                         }
                        

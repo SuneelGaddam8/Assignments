@@ -11,12 +11,9 @@ function calculate(event){
     let clickButtonValue=event.target.value;
     if(clickButtonValue==="="){
         if(display.value !==""){
-            if(display.value){
-                display.value=0;
-            }
-            else{
-                display.value=result;
-            }
+            
+                display.value=eval(display.value);
+        
         }
     }else if(clickButtonValue==="C"){
         display.value="";

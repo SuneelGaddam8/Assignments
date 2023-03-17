@@ -8,16 +8,20 @@ let second = 00;
 
 
 startBtn.addEventListener('click', function () {
+	if(this.click){
 	timer = true;
-	stopWatch();
+	stopWatch();}
+	this.click=false;
 });
 
 stopBtn.addEventListener('click', function () {
 	timer = false;
+	startBtn.click=true;
 });
 
 resetBtn.addEventListener('click', function () {
 	timer = false;
+	startBtn.click=true;
 	minute = 0;
 	second = 0;
 	document.getElementById('min').innerHTML = "00";
@@ -26,6 +30,7 @@ resetBtn.addEventListener('click', function () {
 let count=0;
 function stopWatch() {
     if (timer) {
+		
         count++;
         if(count==100){
             second++;
@@ -51,7 +56,6 @@ function stopWatch() {
 		if (second < 10) {
 			secString = "0" + secString;
 		}
-
 		document.getElementById('min').innerHTML = minString;
 		document.getElementById('sec').innerHTML = secString;
 		setTimeout(stopWatch, 10);
